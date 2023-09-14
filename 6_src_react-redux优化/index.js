@@ -4,12 +4,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 //引入App组件
 import App from "./App.jsx";
-import store from "./redux/store";
+import store from "./redux/store.js";
 import { Provider } from "react-redux";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //渲染App到页面
 root.render(
-    /* 这样就不用在App里面自己给Count组件传递store了，App里所有的容器组件都能收到store */
+  /* 这样就不用在App里面自己给Count组件传递store了，App里所有的容器组件都能收到store */
   <Provider store={store}>
     <App />
   </Provider>
